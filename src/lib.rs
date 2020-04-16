@@ -17,6 +17,7 @@ pub struct Chord {
     pub width: f64,
     pub label_color: String,
     pub wrap_labels: bool,
+    pub margin: f64,
 }
 
 impl Plot for Chord {
@@ -32,6 +33,7 @@ impl Plot for Chord {
         res = res.replace("${width}", &self.width.to_string());
         res = res.replace("${label_color}", &self.label_color);
         res = res.replace("${wrap_labels}", &self.wrap_labels.to_string());
+        res = res.replace("${margin}", &self.margin.to_string());
         println!("EVCXR_BEGIN_CONTENT text/html\n{}\nEVCXR_END_CONTENT", res);
     }
 
@@ -47,6 +49,7 @@ impl Plot for Chord {
         res = res.replace("${width}", &self.width.to_string());
         res = res.replace("${label_color}", &self.label_color);
         res = res.replace("${wrap_labels}", &self.wrap_labels.to_string());
+        res = res.replace("${margin}", &self.margin.to_string());
         let file_name = "out.html";
 
         let mut file = fs::File::create(file_name).unwrap();
@@ -82,6 +85,7 @@ impl Default for Chord {
             width: 700.0,
             label_color: String::from("#454545"),
             wrap_labels: true,
+            margin: 0.0,
         }
     }
 }
