@@ -18,11 +18,14 @@ pub struct Chord {
     pub label_color: String,
     pub wrap_labels: bool,
     pub margin: f64,
+    pub credit: bool,
+    pub font_size: String,
+    pub font_size_large: String,
 }
 
 impl Plot for Chord {
     fn show(&self) {
-        let template_url = "https://shahinrostami.com/assets/chord/chord.tmpl";
+        let template_url = "https://shahinrostami.com/assets/chord/chord_0_0_12.tmpl";
         let mut res = ureq::get(template_url).call().into_string().unwrap();
         res = res.replace("${tag_id}", &format!("chart-{}", nanoid!()));
         res = res.replace("${matrix}", &format!("{:?}", self.matrix));
@@ -34,6 +37,10 @@ impl Plot for Chord {
         res = res.replace("${label_color}", &self.label_color);
         res = res.replace("${wrap_labels}", &self.wrap_labels.to_string());
         res = res.replace("${margin}", &self.margin.to_string());
+        res = res.replace("${credit}", &self.credit.to_string());
+        res = res.replace("${font_size}", &self.font_size);
+        res = res.replace("${font_size_large}", &self.font_size_large);
+
         println!("EVCXR_BEGIN_CONTENT text/html\n{}\nEVCXR_END_CONTENT", res);
     }
 
@@ -50,6 +57,9 @@ impl Plot for Chord {
         res = res.replace("${label_color}", &self.label_color);
         res = res.replace("${wrap_labels}", &self.wrap_labels.to_string());
         res = res.replace("${margin}", &self.margin.to_string());
+        res = res.replace("${credit}", &self.credit.to_string());
+        res = res.replace("${font_size}", &self.font_size);
+        res = res.replace("${font_size_large}", &self.font_size_large);
         let file_name = "out.html";
 
         let mut file = fs::File::create(file_name).unwrap();
@@ -84,8 +94,11 @@ impl Default for Chord {
             padding: 0.01,
             width: 700.0,
             label_color: String::from("#454545"),
-            wrap_labels: true,
+            wrap_labels: false,
             margin: 0.0,
+            credit: true,
+            font_size: String::from("16px"),
+            large_font_size: String::from("20px"),
         }
     }
 }
