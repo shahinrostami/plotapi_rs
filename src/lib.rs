@@ -98,7 +98,7 @@ impl Default for Chord {
             margin: 0.0,
             credit: true,
             font_size: String::from("16px"),
-            large_font_size: String::from("20px"),
+            font_size_large: String::from("20px"),
         }
     }
 }
