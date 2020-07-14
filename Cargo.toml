@@ -1,6 +1,6 @@
 [package]
 name = "chord"
-version = "0.1.4"
+version = "0.1.5"
 authors = ["Dr. Shahin Rostami <hello@shahinrostami.com>"]
 edition = "2018"
 description = "Rust wrapper around d3-chord"
@@ -11,5 +11,5 @@ repository = "https://github.com/shahinrostami/chord_rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-ureq = "0.11.4"
+ureq = {version = "0.11.4", features = ["json"]}
 nanoid = "0.3.0"
