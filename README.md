@@ -1,6 +1,6 @@
 ![ChordPRO](https://newsletter.stamilabs.com/uploads/ac_ducks_2.png)
 
-# Chord PRO
+# Chord PRO Released
 
 [Chord PRO](https://m8.fyi/chord) is the full-featured chord visualization API, producing beautiful interactive visualizations, e.g. those featured on the front page of Reddit.
 
