@@ -1,3 +1,31 @@
+![ChordPRO](https://newsletter.stamilabs.com/uploads/ac_ducks_2.png)
+
+# Chord PRO
+
+[Chord PRO](https://m8.fyi/chord) is the full-featured chord visualization API, producing beautiful interactive visualizations, e.g. those featured on the front page of Reddit.
+
+- Produce beautiful interactive Chord diagrams.
+- Customize colours and font-sizes.
+- Access Divided mode, enabling two sides to your diagram.
+- Add images and text on hover,
+- Access finer-customisations including HTML injection.
+- Allows commercial use without open source requirement.
+- Currently supports Python, JavaScript, and Rust, with many more to come (accepting requests).
+
+[Get it here!](https://m8.fyi/chord)
+
+
+# Changelog:
+
+- **14 July 2020** - `ChordPRO` can now be enabled by entering your [license key](https://store.shahinrostami.com/product/chord-pro/).
+
+
+- **29 June 2020** - Optimisation and bug fixes to the tooltip have massively improved the interactive performance of the visualisation (**Rebuild your chord diagrams** to take advantage of this change).
+
+- **22 May 2020** - Optimisation and bug fixes have massively improved the interactive performance of the visualisation (**Rebuild your chord diagrams** to take advantage of this change).
+
+- **21 May 2020** - Please update to the latest version of `chord`. Backwards compatability has been introduced, so from this version onwards, new versions won't break older ones!
+
 ![Example Image](images/2.gif)
 
 # Introduction
