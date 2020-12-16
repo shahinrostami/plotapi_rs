@@ -1,4 +1,4 @@
-![ChordPRO](https://newsletter.stamilabs.com/uploads/ac_ducks_2.png)
+![ChordPRO](https://newsletter.datacrayon.com/uploads/ac_ducks_2.png)
 
 # Chord PRO Released
 
