@@ -289,8 +289,4 @@ The `chord` package switches to `PRO` mode when a username and license are speci
 
 This uses the Chord PRO API service hosted on the `DataCrayon.com` (AWS hosted) server to generate your visualisation.
 
-![Example Image](images/1.gif)
-
-```
-
-```
+![Example Image](images/2.gif)
