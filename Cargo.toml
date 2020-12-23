@@ -12,4 +12,3 @@ repository = "https://github.com/shahinrostami/chord_rs"
 
 [dependencies]
 ureq = {version = "0.11.4", features = ["json"]}
-nanoid = "0.3.0"

@@ -1,6 +1,5 @@
 mod lib;
 use lib::{Chord, Plot};
-use nanoid::nanoid;
 use std::fs;
 use std::io::prelude::*;
 
