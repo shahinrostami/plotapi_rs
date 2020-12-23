@@ -25,8 +25,8 @@ fn main() {
     
 
     lib::Chord {
-      user: String::from("hello@shahinrostami.com"),
-        key: String::from("CP-2233d274-f968-4018-870b-4926b1793912"),
+      user: String::from(""),
+        key: String::from(""),
         matrix: matrix.clone(),
         names: names.clone(),
        colors: colors,

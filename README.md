@@ -17,14 +17,38 @@
 
 # Changelog:
 
-- **14 July 2020** - `ChordPRO` can now be enabled by entering your [license key](https://store.shahinrostami.com/product/chord-pro/).
+- **23 December 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports `reverse_gradients`.
+
+![reverse_gradients](images/reverse_gradients.jpg)
+
+- **02 December 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now has [better support] for text customisation with the `conjunction` parameter.
+
+- **21 November 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now has [better support](https://twitter.com/ShahinRostami/status/1330145866758434818) for asymmetric chord diagrams.
+
+- **03 November 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports nodes with no relationships.
+
+- **26 October 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports Downloading to image when multiple Chord diagrams appear on the same page.
+
+- **03 October 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports visualising [occurrences as well as co-occurrences](https://github.com/shahinrostami/chord/issues/18#issuecomment-703174362).
+
+- **29 August 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports enabling a Download to image button.
+
+- **16 August 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports radius scaling and bipartite titles.
+
+- **13 August 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports Arc numbers.
+
+- **23 July 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports figure titles.
+
+- **20 July 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports asymmetric mode using `symmetric=False`! You can also override the `verb` used in the popup.
+
+- **14 July 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) can now be enabled by entering your [license key](https://store.shahinrostami.com/product/chord-pro/).
 
 
 - **29 June 2020** - Optimisation and bug fixes to the tooltip have massively improved the interactive performance of the visualisation (**Rebuild your chord diagrams** to take advantage of this change).
 
 - **22 May 2020** - Optimisation and bug fixes have massively improved the interactive performance of the visualisation (**Rebuild your chord diagrams** to take advantage of this change).
 
-- **21 May 2020** - Please update to the latest version of `chord`. Backwards compatability has been introduced, so from this version onwards, new versions won't break older ones!
+- **21 May 2020** - Please update to the latest version of `chord`. Backwards compatibility has been introduced, so from this version onwards, new versions won't break older ones!
 
 ![Example Image](images/2.gif)
 
@@ -237,6 +261,7 @@ Chord {
 ```
 
 
+
 <div class="footnote">
 <hr>
 <ol>
@@ -246,11 +271,26 @@ Chord {
 </ol>
 </div>
 
-# Credits
 
-- d3-chord, Mike Bostock.
-- d3-chord gradient fills, Nadieh Bremer.
-- `chord` (Python), Shahin Rostami.
-- `chord` (Rust), Shahin Rostami.
+
+# Data and Templates
+
+## Chord FREE package
+
+The `chord` package switches to `FREE` mode when a username and license are not specified, or if they are both set to `"free"`. This disables the use of all the `PRO` features.
+
+This uses the Chord FREE API service hosted on the `DataCrayon.com` (AWS hosted) server to generate your visualisation.
+
+Chord FREE uses the [AGPL-3.0 License](https://github.com/shahinrostami/chord/blob/master/LICENSE).
+
+## Chord PRO (full-featured) package
+
+The `chord` package switches to `PRO` mode when a username and license are specified. This enables the use of all the `PRO` features.
+
+This uses the Chord PRO API service hosted on the `DataCrayon.com` (AWS hosted) server to generate your visualisation.
 
 ![Example Image](images/1.gif)
+
+```
+
+```
