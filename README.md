@@ -72,7 +72,7 @@ The primary support is for `Jupyter Lab` (not the older `Jupyter Notebook`).
 Available on [crates.io](https://crates.io/crates/chord).
 
 ```bash
-:dep chord = {Version = "0.1.1"}
+:dep chord = {Version = "0.2.1"}
 use chord::{Chord, Plot};
 ```
 
