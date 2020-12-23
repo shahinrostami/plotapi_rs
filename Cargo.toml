@@ -1,11 +1,11 @@
 [package]
 name = "chord"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Dr. Shahin Rostami <hello@shahinrostami.com>"]
 edition = "2018"
 description = "Rust wrapper around d3-chord"
 homepage = "https://store.shahinrostami.com/product/data-analysis-with-rust-notebooks/"
-license = "MIT"
+license = "AGPL-3.0"
 repository = "https://github.com/shahinrostami/chord_rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
