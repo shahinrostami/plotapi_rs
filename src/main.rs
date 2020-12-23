@@ -25,8 +25,8 @@ fn main() {
     
 
     lib::Chord {
-      user: String::from(""),
-        key: String::from(""),
+        user: String::from("enter username here"),
+        key: String::from("enter license key here"),
         matrix: matrix.clone(),
         names: names.clone(),
        colors: colors,
