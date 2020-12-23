@@ -1,6 +1,6 @@
+use nanoid::nanoid;
 use std::fs;
 use std::io::prelude::*;
-use nanoid::nanoid;
 use ureq::json;
 
 pub trait Plot {
@@ -36,24 +36,20 @@ pub struct Chord {
     pub divide_idx: u64,
     pub divide_size: f64,
     pub instances: u64,
-    
-
-
 }
 
 impl Plot for Chord {
     fn show(&self) {
-        if(self.user.is_empty() && self.key.is_empty()){
+        if self.user.is_empty() && self.key.is_empty() {
             let template_url = "https://shahinrostami.com/assets/chord/chord_0_0_12.tmpl";
             let mut res = ureq::get(template_url).call().into_string().unwrap();
             res = res.replace("${tag_id}", &format!("chart-{}", nanoid!()));
             res = res.replace("${matrix}", &format!("{:?}", self.matrix));
             res = res.replace("${names}", &format!("{:?}", self.names));
 
-            if(self.colors.len() == 1){
-                res = res.replace("${colors}",&self.colors[0]);
-            }
-            else{
+            if self.colors.len() == 1 {
+                res = res.replace("${colors}", &self.colors[0]);
+            } else {
                 res = res.replace("${colors}", &format!("{:?}", self.colors));
             }
 
@@ -68,60 +64,58 @@ impl Plot for Chord {
             res = res.replace("${font_size_large}", &self.font_size_large);
 
             println!("EVCXR_BEGIN_CONTENT text/html\n{}\nEVCXR_END_CONTENT", res);
-        }
-        else{
+        } else {
             let template_url = "https://api.shahin.dev/chord";
-            
-            let mut res = ureq::post(template_url)
-            .auth(&self.user.to_string(),&self.key.to_string())
-            .send_json(json!({
-                "colors":self.colors,
-                "opacity":self.opacity,
-                "matrix":self.matrix,
-                "names":self.names,
-                "padding":self.padding,
-                "width":self.width,
-                "label_color":self.label_color,
-                "wrap_labels":self.wrap_labels,
-                "credit":self.credit,
-                "margin":self.margin,
-                "font_size":self.font_size,
-                "font_size_large":self.font_size_large,
-                "details":self.details,
-                "details_thumbs":self.details_thumbs,
-                "thumbs_font_size":self.thumbs_font_size,
-                "thumbs_width":self.thumbs_width,
-                "thumbs_margin":self.thumbs_margin,
-                "popup_width":self.popup_width,
-                "noun":self.noun,
-                "details_separator":self.details_separator,
-                "divide":self.divide,
-                "divide_idx":self.divide_idx,
-                "divide_size":self.divide_size,
-                "instances":self.instances
-            }))
-            .into_string().unwrap();
+
+            let res = ureq::post(template_url)
+                .auth(&self.user.to_string(), &self.key.to_string())
+                .send_json(json!({
+                    "colors":self.colors,
+                    "opacity":self.opacity,
+                    "matrix":self.matrix,
+                    "names":self.names,
+                    "padding":self.padding,
+                    "width":self.width,
+                    "label_color":self.label_color,
+                    "wrap_labels":self.wrap_labels,
+                    "credit":self.credit,
+                    "margin":self.margin,
+                    "font_size":self.font_size,
+                    "font_size_large":self.font_size_large,
+                    "details":self.details,
+                    "details_thumbs":self.details_thumbs,
+                    "thumbs_font_size":self.thumbs_font_size,
+                    "thumbs_width":self.thumbs_width,
+                    "thumbs_margin":self.thumbs_margin,
+                    "popup_width":self.popup_width,
+                    "noun":self.noun,
+                    "details_separator":self.details_separator,
+                    "divide":self.divide,
+                    "divide_idx":self.divide_idx,
+                    "divide_size":self.divide_size,
+                    "instances":self.instances
+                }))
+                .into_string()
+                .unwrap();
 
             println!("EVCXR_BEGIN_CONTENT text/html\n{}\nEVCXR_END_CONTENT", res);
-
         }
-    } 
+    }
 
     fn to_html(&self) {
-        if(self.user.is_empty() && self.key.is_empty()){
+        if self.user.is_empty() && self.key.is_empty() {
             let template_url = "https://shahinrostami.com/assets/chord/chord_0_0_12.tmpl";
             let mut res = ureq::get(template_url).call().into_string().unwrap();
             res = res.replace("${tag_id}", &format!("chart-{}", nanoid!()));
             res = res.replace("${matrix}", &format!("{:?}", self.matrix));
             res = res.replace("${names}", &format!("{:?}", self.names));
 
-            if(self.colors.len() == 1){
-                res = res.replace("${colors}",&self.colors[0]);
-            }
-            else{
+            if self.colors.len() == 1 {
+                res = res.replace("${colors}", &self.colors[0]);
+            } else {
                 res = res.replace("${colors}", &format!("{:?}", self.colors));
             }
-            
+
             res = res.replace("${opacity}", &self.opacity.to_string());
             res = res.replace("${padding}", &self.padding.to_string());
             res = res.replace("${width}", &self.width.to_string());
@@ -132,47 +126,49 @@ impl Plot for Chord {
             res = res.replace("${font_size}", &self.font_size);
             res = res.replace("${font_size_large}", &self.font_size_large);
             let file_name = "out.html";
-            
+
             let mut file = fs::File::create(file_name).unwrap();
-            file.write_all(res.as_bytes());
-        }
-        else{
+            file.write_all(res.as_bytes())
+                .expect("writing to output file failed");
+        } else {
             let template_url = "https://api.shahin.dev/chord";
-            
-            let mut res = ureq::post(template_url)
-            .auth(&self.user.to_string(),&self.key.to_string())
-            .send_json(json!({
-                "colors":self.colors,
-                "opacity":self.opacity,
-                "matrix":self.matrix,
-                "names":self.names,
-                "padding":self.padding,
-                "width":self.width,
-                "label_color":self.label_color,
-                "wrap_labels":self.wrap_labels,
-                "credit":self.credit,
-                "margin":self.margin,
-                "font_size":self.font_size,
-                "font_size_large":self.font_size_large,
-                "details":self.details,
-                "details_thumbs":self.details_thumbs,
-                "thumbs_font_size":self.thumbs_font_size,
-                "thumbs_width":self.thumbs_width,
-                "thumbs_margin":self.thumbs_margin,
-                "popup_width":self.popup_width,
-                "noun":self.noun,
-                "details_separator":self.details_separator,
-                "divide":self.divide,
-                "divide_idx":self.divide_idx,
-                "divide_size":self.divide_size,
-                "instances":self.instances
-            }))
-            .into_string().unwrap();
+
+            let res = ureq::post(template_url)
+                .auth(&self.user.to_string(), &self.key.to_string())
+                .send_json(json!({
+                    "colors":self.colors,
+                    "opacity":self.opacity,
+                    "matrix":self.matrix,
+                    "names":self.names,
+                    "padding":self.padding,
+                    "width":self.width,
+                    "label_color":self.label_color,
+                    "wrap_labels":self.wrap_labels,
+                    "credit":self.credit,
+                    "margin":self.margin,
+                    "font_size":self.font_size,
+                    "font_size_large":self.font_size_large,
+                    "details":self.details,
+                    "details_thumbs":self.details_thumbs,
+                    "thumbs_font_size":self.thumbs_font_size,
+                    "thumbs_width":self.thumbs_width,
+                    "thumbs_margin":self.thumbs_margin,
+                    "popup_width":self.popup_width,
+                    "noun":self.noun,
+                    "details_separator":self.details_separator,
+                    "divide":self.divide,
+                    "divide_idx":self.divide_idx,
+                    "divide_size":self.divide_size,
+                    "instances":self.instances
+                }))
+                .into_string()
+                .unwrap();
 
             let file_name = "out.html";
-            
+
             let mut file = fs::File::create(file_name).unwrap();
-            file.write_all(res.as_bytes());
+            file.write_all(res.as_bytes())
+                .expect("writing to output file failed");
         }
     }
 }
