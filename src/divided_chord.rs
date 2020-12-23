@@ -2,7 +2,6 @@ mod lib;
 use lib::{Chord, Plot};
 use std::fs;
 use std::io::prelude::*;
-use nanoid::nanoid;
 
 fn main() {
     let matrix: Vec<Vec<f64>> = vec![
