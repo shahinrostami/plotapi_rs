@@ -1,6 +1,6 @@
 [package]
 name = "chord"
-version = "0.8.0"
+version = "0.8.1"
 authors = ["Dr. Shahin Rostami <hello@shahinrostami.com>"]
 edition = "2018"
 description = "Rust wrapper around d3-chord"
