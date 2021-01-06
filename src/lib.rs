@@ -46,6 +46,7 @@ pub struct Chord {
     pub allow_download: bool,
     pub conjunction: String,
     pub reverse_gradients: bool,
+    pub curved_labels: bool,
 }
 
 impl Chord {
@@ -95,7 +96,8 @@ impl Chord {
                 "outer_radius_scale": self.outer_radius_scale,
                 "allow_download": self.allow_download,
                 "conjunction": self.conjunction,
-                "reverse_gradients": self.reverse_gradients
+                "reverse_gradients": self.reverse_gradients,
+                "curved_labels":self.curved_labels
             }))
             .into_string()
             .unwrap()
@@ -147,7 +149,7 @@ impl Default for Chord {
             padding: 0.01,
             width: 700.0,
             label_color: String::from("#454545"),
-            wrap_labels: false,
+            wrap_labels: true,
             margin: 0.0,
             credit: true,
             font_size: String::from("16px"),
@@ -175,6 +177,7 @@ impl Default for Chord {
             allow_download: false,
             conjunction: String::from("and"),
             reverse_gradients: false,
+            curved_labels: false,
         }
     }
 }
