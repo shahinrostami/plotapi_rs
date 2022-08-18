@@ -1,4 +1,4 @@
-![ChordPRO](https://newsletter.datacrayon.com/uploads/ac_ducks_2.png)
+![Plotapi](https://plotapi.com/wp-content/uploads/2021/08/1500x500.jpeg)
 
 # Chord PRO Released
 
