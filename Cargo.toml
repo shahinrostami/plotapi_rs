@@ -5,6 +5,7 @@ edition = "2021"
 authors = ["Dr. Shahin Rostami <hello@shahinrostami.com>"]
 description = "Engaging visualisations, made easy."
 homepage = "https://plotapi.com"
+repository = "http://github.com/shahinrostami/plotapi_rs"
 license = "MIT"
 keywords = ["plot", "chart", "visualization"]
 
