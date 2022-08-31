@@ -1,14 +1,12 @@
 [package]
-name = "chord"
-version = "0.8.1"
+name = "plotapi"
+version = "0.1.0"
+edition = "2021"
 authors = ["Dr. Shahin Rostami <hello@shahinrostami.com>"]
-edition = "2018"
-description = "Rust wrapper around d3-chord"
-homepage = "https://store.shahinrostami.com/product/data-analysis-with-rust-notebooks/"
-license = "AGPL-3.0"
-repository = "https://github.com/shahinrostami/chord_rs"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "Engaging visualisations, made easy."
+homepage = "https://plotapi.com"
+license = "MIT"
+keywords = ["plot", "chart", "visualization"]
 
 [dependencies]
-ureq = {version = "0.11.4", features = ["json"]}
+ureq = {version = "1.5.5", features = ["json"]}

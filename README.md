@@ -1,292 +1,126 @@
-![Plotapi](https://plotapi.com/wp-content/uploads/2021/08/1500x500.jpeg)
 
-# Chord PRO Released
+<h1 align="center">
+  <br>
+  <a href="https://plotapi.com"><img src="https://plotapi.com/wp-content/uploads/2021/07/plotapi_logo.svg" alt="Plotapi" width="300"></a>
+</h1>
 
-[Chord PRO](https://m8.fyi/chord) is the full-featured chord visualization API, producing beautiful interactive visualizations, e.g. those featured on the front page of Reddit.
+<h4 align="center">Engaging visualisations, made easy.</h4>
 
-- Produce beautiful interactive Chord diagrams.
-- Customize colours and font-sizes.
-- Access Divided mode, enabling two sides to your diagram.
-- Add images and text on hover,
-- Access finer-customisations including HTML injection.
-- Allows commercial use without open source requirement.
-- Currently supports Python, JavaScript, and Rust, with many more to come (accepting requests).
+<p align="center">
+<a href="https://crates.io/crates/chord"><img src="https://img.shields.io/badge/rust%20crate-0.1.0-success.svg"></a>
+<a href="https://pypi.org/project/plotapi/"><img src="https://img.shields.io/badge/pypi%20package-6.0.1-success.svg"></a>
+<a href="https://plotapi.com/"><img src="https://img.shields.io/badge/license-get-green.svg"></a>
+<a href="https://discord.polyra.com"><img src="https://img.shields.io/badge/chat-join-7289da.svg"></a>
+<a href="https://jupyter.org"><img src="https://img.shields.io/badge/supports-jupyter-orange.svg"></a>
+<a href="https://www.linkedin.com/in/shahinrostami/"><img src="https://img.shields.io/badge/linked-in-blue.svg"></a>
+</p>
 
-[Get it here!](https://m8.fyi/chord)
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="https://plotapi.com">Get Access</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#license">License</a>
+</p>
 
+![screenshot](https://plotapi.com/wp-content/uploads/2021/08/1500x500.jpeg)
 
-# Changelog:
+## Key Features
 
-- **23 December 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports `reverse_gradients`.
+* **Plotapi Chord** - Illustrate inter-relationships between data.
+* **Plotapi Sankey** - Illustrate the flow from one set of values to another.
+* **Plotapi Terminus** - Illustrate distributing something out amongst recipients.
+* **Plotapi Bar Fight** - A beautiful take on the classic Bar Chart Race.
+* **Plotapi Pie Fight** - A beautiful take on the classic Pie Chart Race.
+* **Plotapi Heat Map** - Beautiful and interactive heat maps.
+* **Plotapi Line Fight** - A beautiful take on the classic Line Chart Race.
+* **Plotapi Pareto Front** - Illustrate non-dominated (Pareto) fronts over time.
+* **Upcoming Visualisations** - Access to new visualisations as they are introduced.
+* **Supports Most Programming Languages** - Get started with any language able to make HTTP requests.
+* **First-Class Python Support** - Get started with pip install plotapi
+* **Jupyter Lab/Notebook + Google Colab Support** - Super-charge your notebooks with inline visualisations.
+* **Beautiful Themes & Fonts** - Select from pre-made beautiful themes, or add your own.
+* **Share or Embed Interactive HTML** - Download and embed your interactive visualisations.
+* **Render to PDF, SVG, or PNG** - Generate high-quality output ready for print.
+* **Record Animation to Video** - Create social media-ready animated visualisations.
 
-![reverse_gradients](images/reverse_gradients.jpg)
+## Get Access
 
-- **02 December 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now has [better support] for text customisation with the `conjunction` parameter.
+Visit [the website](https://plotapi.com/#pricing) to get access to Plotapi.
 
-- **21 November 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now has [better support](https://twitter.com/ShahinRostami/status/1330145866758434818) for asymmetric chord diagrams.
+## Installation
 
-- **03 November 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports nodes with no relationships.
+Get up and running with Rust with the `plotapi` crate.
 
-- **26 October 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports Downloading to image when multiple Chord diagrams appear on the same page.
+## Usage
 
-- **03 October 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports visualising [occurrences as well as co-occurrences](https://github.com/shahinrostami/chord/issues/18#issuecomment-703174362).
+### Example - Chord Pro
 
-- **29 August 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports enabling a Download to image button.
+https://user-images.githubusercontent.com/15690380/126084021-b008b256-2a31-4106-84af-42777ea480d9.mp4
 
-- **16 August 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports radius scaling and bipartite titles.
-
-- **13 August 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports Arc numbers.
-
-- **23 July 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports figure titles.
-
-- **20 July 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) now supports asymmetric mode using `symmetric=False`! You can also override the `verb` used in the popup.
-
-- **14 July 2020** - [`Chord PRO`](https://store.shahinrostami.com/product/chord-pro/) can now be enabled by entering your [license key](https://store.shahinrostami.com/product/chord-pro/).
-
-
-- **29 June 2020** - Optimisation and bug fixes to the tooltip have massively improved the interactive performance of the visualisation (**Rebuild your chord diagrams** to take advantage of this change).
-
-- **22 May 2020** - Optimisation and bug fixes have massively improved the interactive performance of the visualisation (**Rebuild your chord diagrams** to take advantage of this change).
-
-- **21 May 2020** - Please update to the latest version of `chord`. Backwards compatibility has been introduced, so from this version onwards, new versions won't break older ones!
-
-![Example Image](images/2.gif)
-
-# Introduction
-
-In a chord diagram (or radial network), entities are arranged radially as segments with their relationships visualised by arcs that connect them. The size of the segments illustrates the numerical proportions, whilst the size of the arc illustrates the significance of the relationships<sup id="fnref-footnote"><a class="footnote-ref" href="#fn-footnote">1</a></sup>.
-
-Chord diagrams are useful when trying to convey relationships between different entities, and they can be beautiful and eye-catching.
-
-## The Chord Crate
-
-I wasn't able to find any Rust crates for plotting chord diagrams, so I ported [my own](https://pypi.org/project/chord/) from Python to Rust.
-
-
-You can get the package either from [crates.io](https://crates.io/crates/chord) or from the [GitHub repository](https://github.com/shahinrostami/chord_rs). With your processed data, you should be able to plot something beautiful with just a single line, `Chord{ matrix : matrix, names : names, .. Chord::default() }.show()`
-
-The primary support is for `Jupyter Lab` (not the older `Jupyter Notebook`).
-
-# Installation
-
-Available on [crates.io](https://crates.io/crates/chord).
-
-```bash
-:dep chord = {Version = "0.2.1"}
-use chord::{Chord, Plot};
-```
-
-# Examples
-
-You can see the actual interactive examples [on this page](https://shahinrostami.com/posts/programming/rust-notebooks/chord-diagrams/). The below examples are screenshots.
-
-## The Dataset
-
-The focus for this section will be the demonstration of the `chord` package. To keep it simple, we will use synthetic data that illustrates the co-occurrences between movie genres within the same movie.
+#### Created with Plotapi
 
 ```rust
-let matrix: Vec<Vec<f64>> = vec![
-    vec![0., 5., 6., 4., 7., 4.],
-    vec![5., 0., 5., 4., 6., 5.],
-    vec![6., 5., 0., 4., 5., 5.],
-    vec![4., 4., 4., 0., 5., 5.],
-    vec![7., 6., 5., 5., 0., 4.],
-    vec![4., 5., 5., 5., 4., 0.],
-];
+use plotapi::params;
+use plotapi::Visualisation;
 
-let names: Vec<String> = vec![
-    "Action",
-    "Adventure",
-    "Comedy",
-    "Drama",
-    "Fantasy",
-    "Thriller",
-]
-.into_iter()
-.map(String::from)
-.collect();
-```
+fn main() {
+    let names: Vec<String> = vec!["A", "B", "C", "1", "2", "3"]
+        .into_iter()
+        .map(String::from)
+        .collect();
 
-## Default Settings
+    let matrix: Vec<Vec<f64>> = vec![
+        vec![0.0, 0.0, 0.0, 1.0, 4.0, 1.0],
+        vec![0.0, 0.0, 0.0, 1.0, 3.0, 2.0],
+        vec![0.0, 0.0, 0.0, 1.0, 2.0, 2.0],
+        vec![1.0, 1.0, 1.0, 0.0, 0.0, 0.0],
+        vec![4.0, 3.0, 2.0, 0.0, 0.0, 0.0],
+        vec![1.0, 2.0, 2.0, 0.0, 0.0, 0.0],
+    ];
 
-Let's see what the `Chord` defaults produce when we invoke the `show()` method.
+    let colors: Vec<String> = vec![
+        "#7400B8", "#5E60CE", "#5684D6", "#56CFE1", "#64DFDF", "#80FFDB",
+    ]
+    .into_iter()
+    .map(String::from)
+    .collect();
 
-```rust
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    ..Chord::default()
+    let param = params!({
+        "matrix": matrix,
+       "names": names,
+       "colors":  colors
+
+    });
+
+    Visualisation {
+        api_key: "17ec2f26-076c-4110-a23a-9a02efe2d52a",
+        params: param,
+        endpoint: "chord",
+    }
+    .to_html();
 }
-.show();
+
 ```
 
-![Example Image](images/1.png)
+### Example - Sankey Pro
 
-You can also save it to a HTML file.
-
-```rust
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    ..Chord::default()
-}
-.to_html();
-```
-
-## Different Colours
-
-The defaults are nice, but what if we want different colours? You can pass in almost anything from [d3-scale-chromatic](https://github.com/d3/d3-scale-chromatic#categorical), or you could pass in a list of hexadecimal colour codes.
-
-```rust
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    colors: "d3.schemeSet2".to_string(),
-    ..Chord::default()
-}
-.show();
-```
-
-![Example Image](images/2.png)
-
-```rust
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    colors: format!("d3.schemeGnBu[{:?}]",names.len()).to_string(),
-    ..Chord::default()
-}
-.show();
-```
-
-![Example Image](images/3.png)
-
-```rust
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    colors: "d3.schemeSet3".to_string(),
-    ..Chord::default()
-}
-.show();
-```
-
-![Example Image](images/4.png)
-
-```rust
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    colors: format!("d3.schemePuRd[{:?}]",names.len()).to_string(),
-    ..Chord::default()
-}
-.show();
-```
-
-![Example Image](images/5.png)
-
-```python
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    colors: format!("d3.schemeYlGnBu[{:?}]",names.len()).to_string(),
-    ..Chord::default()
-}
-.show();
-```
-
-![Example Image](images/6.png)
-
-```rust
-let hex_colours : Vec<String> = vec!["#222222", "#333333", "#4c4c4c", "#666666", "#848484", "#9a9a9a"].into_iter()
-.map(String::from)
-.collect();
-
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    colors: format!("{:?}",hex_colours),
-    ..Chord::default()
-}
-.show();
-```
-
-![Example Image](images/7.png)
-
-## Label Styling
-
-We can disable the wrapped labels, and even change the colour.
-
-```rust
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    wrap_labels: false,
-    label_color:"#4c40bf".to_string(),
-    ..Chord::default()
-}
-.show();
-```
-
-![Example Image](images/8.png)
-
-## Opacity
-
-We can also change the default opacity of the relationships.
-
-```rust
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    opacity: 0.1,
-    ..Chord::default()
-}
-.show();
-```
-
-![Example Image](images/9.png)
-
-# Diagram Size
-
-We can change the maximum diagram size by specifying a width.
-
-```rust
-Chord {
-    matrix: matrix.clone(),
-    names: names.clone(),
-    width: 400.0,
-    ..Chord::default()
-}
-.show()
-```
+https://user-images.githubusercontent.com/15690380/126084745-712fd744-b626-429d-85f3-30b11979fe30.mp4
 
 
 
-<div class="footnote">
-<hr>
-<ol>
-<li id="fn-footnote">
-<p>Tintarev, N., Rostami, S., & Smyth, B. (2018, April). Knowing the unknown: visualising consumption blind-spots in recommender systems. In Proceedings of the 33rd Annual ACM Symposium on Applied Computing (pp. 1396-1399).&nbsp;<a class="footnote-backref" href="#fnref-footnote" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-</ol>
-</div>
+## License
+
+MIT
+
+---
+
+## Prefer not to code? Check out the App at [PlotAPI.com](https://plotapi.com). Python version available.
+
+<a href="https://plotapi.com"><img src="https://plotpanel.com/static/marketing/plotpanel_preview_1.jpg" alt="PlotPanel"></a>
 
 
-
-# Data and Templates
-
-## Chord FREE package
-
-The `chord` package switches to `FREE` mode when a username and license are not specified, or if they are both set to `"free"`. This disables the use of all the `PRO` features.
-
-This uses the Chord FREE API service hosted on the `DataCrayon.com` (AWS hosted) server to generate your visualisation.
-
-Chord FREE uses the [AGPL-3.0 License](https://github.com/shahinrostami/chord/blob/master/LICENSE).
-
-## Chord PRO (full-featured) package
-
-The `chord` package switches to `PRO` mode when a username and license are specified. This enables the use of all the `PRO` features.
-
-This uses the Chord PRO API service hosted on the `DataCrayon.com` (AWS hosted) server to generate your visualisation.
-
-![Example Image](images/2.gif)
+> [plotapi.com](https://plotapi.com) &nbsp;&middot;&nbsp;
+> GitHub [@shahinrostami](https://github.com/shahinrostami) &nbsp;&middot;&nbsp;
+> Twitter [@shahinrostami](https://twitter.com/shahinrostami)  &nbsp;&middot;&nbsp;
+> A [Polyra](https://polyra.com) innovation
