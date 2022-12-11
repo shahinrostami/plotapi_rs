@@ -1,13 +1,13 @@
 use std::fs;
 use std::io::prelude::*;
-use ureq::SerdeValue;
 
 pub use ureq::json as params;
+pub use ureq::SerdeValue as Params;
 
 pub struct Visualisation {
     pub api_key: &'static str,
     pub endpoint: &'static str,
-    pub params: SerdeValue,
+    pub params: Params,
 }
 
 impl Visualisation {
